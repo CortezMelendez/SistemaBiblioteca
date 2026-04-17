@@ -1,11 +1,13 @@
 package utez.edu.mx.biblioteca.controller;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
+import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
-public class AuthController {
+public class AuthController extends ControladorBase {
     @FXML
     private Label welcomeText;
 
@@ -18,18 +20,22 @@ public class AuthController {
 
     @FXML
     protected void iniciarSesion(ActionEvent e) {
-        final String password = "root";
-        final String user = "1234";
+        final String userDef = "root";
+        final String passwordDef = "1234";
 
-        String user1 = this.user.getText();
-        String password1 = this.password.getText();
+        String inputUser = this.user.getText();
+        String inputPassword = this.password.getText();
 
-        if (user1.isEmpty() || password1.isEmpty()){
-            logs.setText("los campos no pueden estar vacios");
+        if (inputUser.isEmpty() || inputPassword.isEmpty()) {
+            logs.setText("Los campos no pueden estar vacíos");
             return;
-        } else if (user1.equals("root") && password1.equals("1234")) {
+        }
+
+        if (inputUser.equals(userDef) && inputPassword.equals(passwordDef)) {
             logs.setText("Bienvenido");
-            return;
+            cambiarVentana(e, "libros.fxml", "Lista de Libros");
+        } else {
+            logs.setText("Credenciales incorrectas");
         }
     }
 }
