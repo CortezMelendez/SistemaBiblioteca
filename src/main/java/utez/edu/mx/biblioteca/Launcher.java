@@ -1,4 +1,4 @@
-package utez.edu.mx.biblioteca;
+package utez.edu.mx.biblioteca.model;
 
 import javafx.application.Application;
 
