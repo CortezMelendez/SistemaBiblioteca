@@ -1,0 +1,413 @@
+/* ================================================================
+   BIBLIOTECA APP — Minimalist JavaFX Stylesheet
+   Neutral palette · Frosted glass · Smooth transitions
+   Compatible con JavaFX 17+
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   VARIABLES GLOBALES (simuladas con colores fijos por compatibilidad)
+   ---------------------------------------------------------------- */
+
+/* Paleta:
+   --bg-base:        #EFEFEF  (fondo principal)
+   --glass-surface:  rgba(255,255,255,0.72)
+   --border-soft:    #DCDCDC
+   --text-primary:   #1A1A1A
+   --text-secondary: #6B6B6B
+   --text-muted:     #A8A8A8
+   --accent:         #3D3D3D
+   --accent-hover:   #565656
+   --danger:         #C0392B
+   --success:        #27AE60
+*/
+
+/* ================================================================
+   ROOT — Fondo de toda la aplicación
+   ================================================================ */
+
+.root {
+    -fx-background-color:
+            radial-gradient(center 30% 20%, radius 60%, #E8E8E8 0%, transparent 100%),
+            radial-gradient(center 80% 85%, radius 50%, #D8D8D8 0%, transparent 100%),
+            #EFEFEF;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+/* ================================================================
+   PANELES — Efecto frosted glass con sombra suave
+   ================================================================ */
+
+.glass-card {
+    -fx-background-color: rgba(255, 255, 255, 0.78);
+    -fx-background-radius: 20;
+    -fx-border-color: rgba(220, 220, 220, 0.9);
+    -fx-border-width: 1;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.10), 28, 0.08, 0, 6);
+    -fx-padding: 36 40 36 40;
+}
+
+.card-inner {
+    -fx-background-color: rgba(248, 248, 248, 0.55);
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(200, 200, 200, 0.6);
+    -fx-border-width: 1;
+    -fx-border-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 12, 0.04, 0, 3);
+    -fx-padding: 24;
+}
+
+/* ================================================================
+   TÍTULO DE PANTALLA
+   ================================================================ */
+
+.screen-title {
+    -fx-text-fill: #1A1A1A;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.92;
+}
+
+.screen-subtitle {
+    -fx-text-fill: #6B6B6B;
+    -fx-font-size: 13px;
+    -fx-font-weight: normal;
+}
+
+/* ================================================================
+   LABELS — Etiquetas descriptivas e informativas
+   ================================================================ */
+
+.label {
+    -fx-text-fill: #4A4A4A;
+    -fx-font-size: 13.5px;
+}
+
+.field-label {
+    -fx-text-fill: #6B6B6B;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.85;
+}
+
+.info-label {
+    -fx-text-fill: #1A1A1A;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Mensajes de estado */
+.msg-label {
+    -fx-text-fill: #6B6B6B;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.msg-error {
+    -fx-text-fill: #C0392B;
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+}
+
+.msg-success {
+    -fx-text-fill: #27AE60;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* ================================================================
+   TEXT FIELDS — Inputs con borde suave y foco animado
+   ================================================================ */
+
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 10;
+    -fx-border-color: #DCDCDC;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-padding: 10 14 10 14;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1A1A1A;
+    -fx-prompt-text-fill: #ABABAB;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 4, 0, 0, 1);
+}
+
+.text-field:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #888888;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0.05, 0, 2);
+}
+
+.text-field:hover {
+    -fx-border-color: #B0B0B0;
+    -fx-background-color: #FAFAFA;
+}
+
+/* ================================================================
+   BOTONES — Variantes primaria, secundaria y ghost
+   ================================================================ */
+
+/* --- Botón Primario (oscuro) --- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom, #3D3D3D, #2A2A2A);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 11 28 11 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0.1, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #565656, #3D3D3D);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 14, 0.15, 0, 5);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: linear-gradient(to bottom, #1A1A1A, #111111);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 1);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* --- Botón Secundario (blanco con borde) --- */
+.btn-secondary {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-text-fill: #3D3D3D;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-color: #CECECE;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-padding: 10 28 10 28;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 6, 0.05, 0, 2);
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #F2F2F2;
+    -fx-border-color: #A0A0A0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.05, 0, 3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.btn-secondary:pressed {
+    -fx-background-color: #E8E8E8;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* --- Botón Ghost / Solo texto --- */
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6B6B6B;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.btn-ghost:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.05);
+    -fx-text-fill: #1A1A1A;
+}
+
+/* --- Botón de acción principal (login) — tamaño completo --- */
+.btn-full {
+    -fx-pref-width: 240;
+    -fx-pref-height: 44;
+}
+
+/* ================================================================
+   SEPARADOR
+   ================================================================ */
+
+.separator {
+    -fx-background-color: #DCDCDC;
+    -fx-pref-height: 1;
+    -fx-opacity: 0.7;
+}
+
+/* ================================================================
+   TABLA (TableView para futuros módulos)
+   ================================================================ */
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(240, 240, 240, 0.95);
+    -fx-background-radius: 12 12 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6B6B6B;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 10 16 10 16;
+}
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 4 0 4 0;
+    -fx-border-color: transparent transparent #F0F0F0 transparent;
+    -fx-border-width: 1;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(245, 245, 245, 0.5);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(61, 61, 61, 0.08);
+    -fx-text-fill: #1A1A1A;
+}
+
+.table-cell {
+    -fx-padding: 10 16 10 16;
+    -fx-text-fill: #3A3A3A;
+    -fx-font-size: 13.5px;
+}
+
+/* ================================================================
+   SCROLL BAR — Estilo minimalista
+   ================================================================ */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #C8C8C8;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #A8A8A8;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+/* ================================================================
+   DIALOG / ALERT — Ventanas modales
+   ================================================================ */
+
+.dialog-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 30, 0.1, 0, 8);
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: linear-gradient(to bottom, #3D3D3D, #2A2A2A);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 8 20 8 20;
+}
+
+/* ================================================================
+   ANIMACIONES DE ENTRADA — Fade + Slide Up al aparecer
+   Aplica la clase .animated-entry al nodo raíz del FXML
+   ================================================================ */
+
+.animated-entry {
+    -fx-opacity: 0;
+    -fx-translate-y: 18;
+}
+
+/* La animación real se activa desde Java con Timeline/FadeTransition.
+   En el controller puedes usar:
+
+   FadeTransition ft = new FadeTransition(Duration.millis(420), rootNode);
+   ft.setFromValue(0); ft.setToValue(1);
+
+   TranslateTransition tt = new TranslateTransition(Duration.millis(420), rootNode);
+   tt.setFromY(18); tt.setToY(0);
+
+   ParallelTransition pt = new ParallelTransition(ft, tt);
+   pt.setInterpolator(Interpolator.EASE_OUT);
+   pt.play();
+*/
+
+/* ================================================================
+   ÍCONOS CON IKONLI (Box Icons equivalent para JavaFX)
+   Añadir dependencia en pom.xml:
+
+   <dependency>
+     <groupId>org.kordamp.ikonli</groupId>
+     <artifactId>ikonli-javafx</artifactId>
+     <version>12.3.1</version>
+   </dependency>
+   <dependency>
+     <groupId>org.kordamp.ikonli</groupId>
+     <artifactId>ikonli-boxicons-pack</artifactId>
+     <version>12.3.1</version>
+   </dependency>
+
+   Uso en FXML:
+   <fi:FontIcon iconLiteral="bx-user" iconSize="18" iconColor="#6B6B6B" />
+   xmlns:fi="http://kordamp.org/ikonli/javafx"
+   ================================================================ */
+
+.icon-field {
+    -fx-icon-color: #A8A8A8;
+    -fx-icon-size: 16;
+}
+
+/* ================================================================
+   UTILIDADES — Clases de apoyo
+   ================================================================ */
+
+.mt-8  { -fx-padding: 8  0 0 0; }
+.mt-16 { -fx-padding: 16 0 0 0; }
+.mb-8  { -fx-padding: 0 0  8 0; }
+.mb-16 { -fx-padding: 0 0 16 0; }
+
+.text-center { -fx-alignment: center; }
+.text-bold   { -fx-font-weight: bold; }
+.text-muted  { -fx-text-fill: #A8A8A8; }
+.text-dark   { -fx-text-fill: #1A1A1A; }
+
+.w-full  { -fx-pref-width: 9999; -fx-max-width: 9999; }
+.rounded { -fx-background-radius: 10; -fx-border-radius: 10; }
+
+/* Badge de estado */
+.badge {
+    -fx-background-color: rgba(61,61,61,0.10);
+    -fx-background-radius: 20;
+    -fx-padding: 3 10 3 10;
+    -fx-text-fill: #3D3D3D;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}

@@ -3,26 +3,89 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="368.0" prefWidth="603.0" spacing="15" style="-fx-padding: 40;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utez.edu.mx.biblioteca.controller.MostrarController">
-   <Pane prefHeight="334.0" prefWidth="523.0">
-      <children>
-          <Label fx:id="lblTitulo" layoutX="113.0" layoutY="157.0" prefHeight="32.0" prefWidth="155.0" />
-          <Label fx:id="lblGenero" layoutX="109.0" layoutY="132.0" prefHeight="25.0" prefWidth="149.0" />
-      
-          <Label fx:id="lblId" layoutX="114.0" layoutY="93.0" prefHeight="39.0" prefWidth="149.0" />
-      
-          <Button layoutX="103.0" layoutY="222.0" onAction="#mostrar" text="Mostrar" />
-      
-          <Label layoutX="60.0" layoutY="17.0" prefHeight="65.0" prefWidth="143.0" style="-fx-font-size: 24;" text="Mostrar Libro" />
-         <Button layoutX="349.0" layoutY="222.0" mnemonicParsing="false" onAction="#guardarLibro" text="Registrar" />
-         <Label fx:id="lblMensaje" layoutX="243.0" layoutY="189.0" prefHeight="17.0" prefWidth="277.0" />
-         <TextField fx:id="genero" layoutX="306.0" layoutY="145.0" />
-         <TextField fx:id="titulo" layoutX="306.0" layoutY="93.0" />
-         <TextField fx:id="id" layoutX="306.0" layoutY="37.0" />
-         <Label fx:id="lblID2" layoutX="309.0" layoutY="17.0" text="Ingresa el numero del libro" />
-         <Label fx:id="lblTitulo2" layoutX="313.0" layoutY="74.0" text="Ingresa el Titulo del Libro" />
-         <Label fx:id="lblGenero2" layoutX="311.0" layoutY="124.0" text="Ingresa el genero del libro" />
-      </children>
-   </Pane>
+<VBox alignment="CENTER" prefHeight="368.0" prefWidth="603.0" spacing="15"
+      style="-fx-padding: 40;"
+      stylesheets="@styles.css"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="utez.edu.mx.biblioteca.controller.MostrarController">
+
+    <Pane prefHeight="334.0" prefWidth="523.0" styleClass="glass-card">
+        <children>
+
+            <!-- ══ COLUMNA IZQUIERDA: Mostrar resultado (x: 20–240) ══ -->
+
+            <Label layoutX="20.0" layoutY="16.0" prefHeight="40.0" prefWidth="200.0"
+                   text="Mostrar Libro"
+                   styleClass="screen-title" />
+
+            <Label fx:id="lblId"
+                   layoutX="20.0" layoutY="80.0"
+                   prefHeight="24.0" prefWidth="200.0"
+                   styleClass="info-label" />
+
+            <Label fx:id="lblTitulo"
+                   layoutX="20.0" layoutY="116.0"
+                   prefHeight="24.0" prefWidth="200.0"
+                   styleClass="info-label" />
+
+            <Label fx:id="lblGenero"
+                   layoutX="20.0" layoutY="152.0"
+                   prefHeight="24.0" prefWidth="200.0"
+                   styleClass="info-label" />
+
+            <Button layoutX="20.0" layoutY="256.0"
+                    prefWidth="120.0" prefHeight="38.0"
+                    onAction="#mostrar"
+                    text="Mostrar"
+                    styleClass="btn-secondary" />
+
+
+            <!-- ══ COLUMNA DERECHA: Registrar (x: 280–520) ══ -->
+
+            <Label fx:id="lblID2"
+                   layoutX="280.0" layoutY="16.0"
+                   text="Ingresa el numero del libro"
+                   styleClass="field-label" />
+
+            <TextField fx:id="id"
+                       layoutX="280.0" layoutY="36.0"
+                       prefWidth="223.0"
+                       styleClass="text-field" />
+
+            <Label fx:id="lblTitulo2"
+                   layoutX="280.0" layoutY="88.0"
+                   text="Ingresa el Titulo del Libro"
+                   styleClass="field-label" />
+
+            <TextField fx:id="titulo"
+                       layoutX="280.0" layoutY="108.0"
+                       prefWidth="223.0"
+                       styleClass="text-field" />
+
+            <Label fx:id="lblGenero2"
+                   layoutX="280.0" layoutY="160.0"
+                   text="Ingresa el genero del libro"
+                   styleClass="field-label" />
+
+            <TextField fx:id="genero"
+                       layoutX="280.0" layoutY="180.0"
+                       prefWidth="223.0"
+                       styleClass="text-field" />
+
+            <Label fx:id="lblMensaje"
+                   layoutX="280.0" layoutY="228.0"
+                   prefHeight="17.0" prefWidth="223.0"
+                   styleClass="msg-label" />
+
+            <Button layoutX="280.0" layoutY="256.0"
+                    prefWidth="223.0" prefHeight="38.0"
+                    mnemonicParsing="false"
+                    onAction="#guardarLibro"
+                    text="Registrar"
+                    styleClass="btn-primary" />
+
+        </children>
+    </Pane>
 
 </VBox>

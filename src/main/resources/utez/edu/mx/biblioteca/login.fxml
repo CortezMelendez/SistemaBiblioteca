@@ -4,16 +4,64 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="259.0" prefWidth="318.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utez.edu.mx.biblioteca.controller.AuthController">
+<VBox
+        alignment="CENTER"
+        prefHeight="420.0"
+        prefWidth="360.0"
+        spacing="0"
+        xmlns="http://javafx.com/javafx/17.0.12"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="utez.edu.mx.biblioteca.controller.AuthController"
+        stylesheets="@styles.css">
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
     </padding>
-   <Pane prefHeight="245.0" prefWidth="220.0">
-      <children>
-          <Button layoutX="56.0" layoutY="163.0" onAction="#iniciarSesion" text="Iniciar Sesion" />
-      
-          <Label fx:id="logs" layoutX="12.0" layoutY="121.0" prefHeight="17.0" prefWidth="229.0" />
-         <TextField fx:id="user" layoutX="24.0" layoutY="34.0" />
-         <TextField fx:id="password" layoutX="24.0" layoutY="86.0" />
-      </children></Pane>
+
+    <!-- Tarjeta principal con efecto frosted glass -->
+    <VBox styleClass="glass-card" spacing="20.0" alignment="CENTER">
+
+        <!-- Encabezado -->
+        <VBox spacing="4.0" alignment="CENTER">
+            <Label text="Biblioteca" styleClass="screen-title" />
+            <Label text="Accede a tu cuenta" styleClass="screen-subtitle" />
+        </VBox>
+
+        <!-- Divider visual -->
+        <Region prefHeight="1.0" styleClass="separator" />
+
+        <!-- Campo: Usuario -->
+        <VBox spacing="6.0">
+            <Label text="Usuario" styleClass="field-label" />
+            <TextField
+                    fx:id="user"
+                    promptText="Ingresa tu usuario"
+                    styleClass="text-field"
+                    prefWidth="260.0"
+                    prefHeight="40.0" />
+        </VBox>
+
+        <!-- Campo: Contraseña -->
+        <VBox spacing="6.0">
+            <Label text="Contraseña" styleClass="field-label" />
+            <PasswordField
+                    fx:id="password"
+                    promptText="••••••••"
+                    styleClass="text-field"
+                    prefWidth="260.0"
+                    prefHeight="40.0" />
+        </VBox>
+
+        <!-- Mensaje de error/éxito -->
+        <Label fx:id="logs" styleClass="msg-label" prefWidth="260.0" wrapText="true" />
+
+        <!-- Botón principal -->
+        <Button
+                onAction="#iniciarSesion"
+                text="Iniciar Sesión"
+                styleClass="btn-primary, btn-full"
+                defaultButton="true" />
+
+    </VBox>
+
 </VBox>
