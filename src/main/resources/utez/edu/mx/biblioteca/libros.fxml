@@ -14,14 +14,14 @@
           <Button layoutX="103.0" layoutY="222.0" onAction="#mostrar" text="Mostrar" />
       
           <Label layoutX="60.0" layoutY="17.0" prefHeight="65.0" prefWidth="143.0" style="-fx-font-size: 24;" text="Mostrar Libro" />
-         <Button layoutX="349.0" layoutY="222.0" mnemonicParsing="false" onAction="#onRegistrar" text="Registrar" />
-         <Label layoutX="336.0" layoutY="189.0" prefHeight="0.0" prefWidth="88.0" />
+         <Button layoutX="349.0" layoutY="222.0" mnemonicParsing="false" onAction="#guardarLibro" text="Registrar" />
+         <Label fx:id="lblMensaje" layoutX="336.0" layoutY="189.0" prefHeight="0.0" prefWidth="88.0" />
          <TextField fx:id="genero" layoutX="306.0" layoutY="145.0" />
          <TextField fx:id="titulo" layoutX="306.0" layoutY="93.0" />
          <TextField fx:id="id" layoutX="306.0" layoutY="37.0" />
-         <Label fx:id="lblID" layoutX="309.0" layoutY="17.0" text="Ingresa el numero del libro" />
-         <Label fx:id="lblTitulo" layoutX="313.0" layoutY="74.0" text="Ingresa el Titulo del Libro" />
-         <Label fx:id="lblGenero" layoutX="311.0" layoutY="124.0" text="Ingresa el genero del libro" />
+         <Label fx:id="lblID2" layoutX="309.0" layoutY="17.0" text="Ingresa el numero del libro" />
+         <Label fx:id="lblTitulo2" layoutX="313.0" layoutY="74.0" text="Ingresa el Titulo del Libro" />
+         <Label fx:id="lblGenero2" layoutX="311.0" layoutY="124.0" text="Ingresa el genero del libro" />
       </children>
    </Pane>
 
