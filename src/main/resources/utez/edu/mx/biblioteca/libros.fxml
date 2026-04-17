@@ -3,17 +3,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="utez.edu.mx.biblioteca.controller.MostrarController"
-      style="-fx-padding: 40;">
-
-    <Label text="Mostrar Libro" style="-fx-font-size: 24;"/>
-
-    <Label fx:id="lblId"/>
-    <Label fx:id="lblTitulo"/>
-    <Label fx:id="lblGenero"/>
-
-    <Button text="Mostrar" onAction="#mostrar"/>
+<VBox alignment="CENTER" prefHeight="368.0" prefWidth="603.0" spacing="15" style="-fx-padding: 40;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utez.edu.mx.biblioteca.controller.MostrarController">
+   <Pane prefHeight="334.0" prefWidth="523.0">
+      <children>
+          <Label fx:id="lblTitulo" layoutX="113.0" layoutY="157.0" prefHeight="32.0" prefWidth="37.0" />
+          <Label fx:id="lblGenero" layoutX="109.0" layoutY="132.0" prefHeight="25.0" prefWidth="46.0" />
+      
+          <Label fx:id="lblId" layoutX="114.0" layoutY="93.0" prefHeight="39.0" prefWidth="37.0" />
+      
+          <Button layoutX="103.0" layoutY="222.0" onAction="#mostrar" text="Mostrar" />
+      
+          <Label layoutX="60.0" layoutY="17.0" prefHeight="65.0" prefWidth="143.0" style="-fx-font-size: 24;" text="Mostrar Libro" />
+         <Button layoutX="349.0" layoutY="222.0" mnemonicParsing="false" onAction="#onRegistrar" text="Registrar" />
+         <Label layoutX="336.0" layoutY="189.0" prefHeight="0.0" prefWidth="88.0" />
+         <TextField fx:id="genero" layoutX="306.0" layoutY="145.0" />
+         <TextField fx:id="titulo" layoutX="306.0" layoutY="93.0" />
+         <TextField fx:id="id" layoutX="306.0" layoutY="37.0" />
+         <Label fx:id="lblID" layoutX="309.0" layoutY="17.0" text="Ingresa el numero del libro" />
+         <Label fx:id="lblTitulo" layoutX="313.0" layoutY="74.0" text="Ingresa el Titulo del Libro" />
+         <Label fx:id="lblGenero" layoutX="311.0" layoutY="124.0" text="Ingresa el genero del libro" />
+      </children>
+   </Pane>
 
 </VBox>
