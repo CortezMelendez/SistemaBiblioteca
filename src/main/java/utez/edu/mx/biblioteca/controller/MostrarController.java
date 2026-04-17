@@ -8,7 +8,6 @@ import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
 public class MostrarController extends ControladorBase {
 
-
     @FXML
     private Label lblId;
     @FXML
@@ -16,11 +15,11 @@ public class MostrarController extends ControladorBase {
     @FXML
     private Label lblGenero;
     @FXML
-    private TextField lblID2;
+    private Label lblID2;
     @FXML
-    private TextField lblGenero2;
+    private Label lblGenero2;
     @FXML
-    private TextField lblTitulo2;
+    private Label lblTitulo2;
     @FXML
     private Label lblMensaje;
     @FXML
@@ -30,26 +29,35 @@ public class MostrarController extends ControladorBase {
     @FXML
     private TextField genero;
 
-    BibliotecaDatos Libro = new BibliotecaDatos(0, "", "");
+    BibliotecaDatos Libro;
 
     @FXML
     public void mostrar() {
+
+        if (Libro == null) {
+            lblMensaje.setText("No hay libro registrado");
+            return;
+        }
+
         lblId.setText("ID: " + Libro.getId());
         lblTitulo.setText("Título: " + Libro.getTitulo());
         lblGenero.setText("Género: " + Libro.getGenero());
     }
+
     @FXML
     public void guardarLibro(ActionEvent event) {
-        String idText2 = lblID2.getText();
-        String titulo2 = lblTitulo2.getText();
-        String genero2 = lblGenero2.getText();
+        String idText2 = this.id.getText();
+        String titulo2 = this.titulo.getText();
+        String genero2 = this.genero.getText();
 
         if (idText2.isEmpty() || titulo2.isEmpty() || genero2.isEmpty()) {
             lblMensaje.setText("Los campos no pueden estar vacíos");
         } else {
             int id = Integer.parseInt(idText2);
-            BibliotecaDatos libro = new BibliotecaDatos(id, genero2, titulo2);
-            lblMensaje.setText("Libro registrado con éxito: " + libro.getTitulo());
+
+            Libro = new BibliotecaDatos(id, genero2, titulo2);
+
+            lblMensaje.setText("Libro registrado con éxito: " + Libro.getTitulo());
         }
     }
 }
