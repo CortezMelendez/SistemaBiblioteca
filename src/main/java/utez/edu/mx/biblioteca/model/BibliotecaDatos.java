@@ -12,14 +12,17 @@ public class BibliotecaDatos {
     }
 
     public int getId() {
+
         return id;
     }
 
     public String getGenero() {
+
         return genero;
     }
 
     public String getTitulo() {
+
         return titulo;
     }
 
