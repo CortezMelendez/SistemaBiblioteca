@@ -1,10 +1,11 @@
 package utez.edu.mx.biblioteca.controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
-
-public class MostrarController {
+public class MostrarController extends BibliotecaDatos {
 
     @FXML
     private Label lblId;
@@ -14,10 +15,16 @@ public class MostrarController {
     @FXML
     private Label lblGenero;
 
+    public MostrarController(int id, String genero, String titulo) {
+        super(id, genero, titulo);
+    }
+
+    BibliotecaDatos Libro = new BibliotecaDatos(0, "", "");
+
     @FXML
-    public void mostrar(){
-        lblId.setText("ID: " + Libro.getUltimoTitulo());
-        lblTitulo.setText("Título: " + Libro.getUltimoTitulo());
-        lblGenero.setText("Género: " + Libro.getUltimoGenero());
+    public void mostrar() {
+        lblId.setText("ID: " + Libro.getId());
+        lblTitulo.setText("Título: " + Libro.getTitulo());
+        lblGenero.setText("Género: " + Libro.getGenero());
     }
 }
