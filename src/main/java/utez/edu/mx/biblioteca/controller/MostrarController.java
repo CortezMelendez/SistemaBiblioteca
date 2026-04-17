@@ -6,8 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
-public class MostrarController extends ControladorBase {
-
+public class MostrarController extends BibliotecaDatos {
 
 
     @FXML
