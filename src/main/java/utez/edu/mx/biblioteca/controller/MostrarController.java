@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
-public class MostrarController extends BibliotecaDatos {
+public class MostrarController extends ControladorBase {
+
+
 
     @FXML
     private Label lblId;
@@ -14,10 +16,6 @@ public class MostrarController extends BibliotecaDatos {
     private Label lblTitulo;
     @FXML
     private Label lblGenero;
-
-    public MostrarController(int id, String genero, String titulo) {
-        super(id, genero, titulo);
-    }
 
     BibliotecaDatos Libro = new BibliotecaDatos(0, "", "");
 
