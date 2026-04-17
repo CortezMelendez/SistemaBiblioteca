@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import utez.edu.mx.biblioteca.model.BibliotecaDatos;
 
-public class MostrarController extends BibliotecaDatos {
+public class MostrarController extends ControladorBase {
 
 
     @FXML
