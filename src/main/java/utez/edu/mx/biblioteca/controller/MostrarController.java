@@ -16,7 +16,7 @@ public class MostrarController {
 
     @FXML
     public void mostrar(){
-        lblId.setText("ID: " + Libro.getUltimoId());
+        lblId.setText("ID: " + Libro.getUltimoTitulo());
         lblTitulo.setText("Título: " + Libro.getUltimoTitulo());
         lblGenero.setText("Género: " + Libro.getUltimoGenero());
     }
