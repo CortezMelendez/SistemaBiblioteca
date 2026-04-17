@@ -11,6 +11,9 @@ public class BibliotecaDatos {
         this.titulo = titulo;
     }
 
+    public BibliotecaDatos() {
+    }
+
     public int getId() {
 
         return id;
